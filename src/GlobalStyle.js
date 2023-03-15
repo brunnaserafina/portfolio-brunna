@@ -58,27 +58,12 @@ table {
 #root {
   font-family: Lexend Deca;
   background-color: #FF9862;
-  width: 100vw;
-  height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: white;
-}
-
-body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-	 background: #494c4e      /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: black;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 1px solid #494c4e;  /* creates padding around scroll thumb */
 }
 `;
 
