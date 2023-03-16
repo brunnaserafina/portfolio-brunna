@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { GithubIcon, LinkedinIcon } from "../common/Icons";
 import ilustration from "../images/ilustration.svg";
 import AboutMe from "./AboutMe";
+import Education from "./Education";
 
 export default function Home() {
   return (
@@ -49,6 +50,7 @@ export default function Home() {
         </Footer>
       </Wrapper>
       <AboutMe />
+      <Education />
     </>
   );
 }

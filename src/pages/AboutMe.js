@@ -77,7 +77,7 @@ export default function AboutMe() {
             <span>
               <StepsIcon />
             </span>
-            <p>Desenvolvimento de habilidades de soft skills</p>
+            <p>Desenvolvimento de habilidades interpessoais</p>
           </div>
           <div>
             <span>
@@ -182,7 +182,6 @@ export default function AboutMe() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
