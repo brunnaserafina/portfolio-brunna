@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { GithubIcon, LinkedinIcon } from "../common/Icons";
 import ilustration from "../images/ilustration.svg";
+import AboutMe from "./AboutMe";
 
 export default function Home() {
   return (
@@ -47,6 +48,7 @@ export default function Home() {
           <img src={ilustration} alt="Ilustração de pessoa programando" />
         </Footer>
       </Wrapper>
+      <AboutMe />
     </>
   );
 }
