@@ -35,6 +35,7 @@ export default function Education() {
                 distribuídos.
               </li>
             </ul>
+            <span></span>
           </div>
           <div>
             <h3>Desenvolvimento Web Full Stack</h3>
@@ -65,6 +66,7 @@ export default function Education() {
                 profissionais.
               </li>
             </ul>
+            <span></span>
           </div>
         </div>
       </Formation>
@@ -103,7 +105,6 @@ export default function Education() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 100vh;
   display: flex;
 `;
 
@@ -114,14 +115,15 @@ const Formation = styled.div`
   h3 {
     font-size: 22px;
     color: #594645;
-    color: #ffff;
+    color: #a41e11;
+    font-weight: 600;
   }
 
   h4 {
     font-size: 20px;
     margin-bottom: 5px;
     color: #594645;
-    color: #ffff;
+    color: #a41e11;
   }
 
   h2 {
@@ -135,19 +137,30 @@ const Formation = styled.div`
     flex-direction: column;
   }
 
-  > div > div {
-    margin-bottom: 50px;
+  > div span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
     background-color: #a41e11;
-    border-top-left-radius: 15px;
+    border-radius: 50%;
+    top: 25px;
+    left: -10px;
+  }
+
+  > div > div {
+    //margin-bottom: 50px;
+    //background-color: #a41e11;
+    //border-top-left-radius: 15px;
     padding: 20px;
-    border-bottom: 5px solid #ffff;
+    border-left: 5px solid #a41e11;
+    position: relative;
   }
 
   li {
     list-style: disc;
     margin-left: 20px;
     font-size: 18px;
-    color: #ff9862;
+    color: black;
   }
 
   img {
@@ -184,6 +197,4 @@ const Certifications = styled.div`
     font-weight: 700;
     margin-left: 10px;
   }
-
- 
 `;

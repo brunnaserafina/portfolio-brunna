@@ -193,6 +193,7 @@ const About = styled.div`
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 1.5vh;
+    margin-top: 3.5vh;
   }
 
   > div {

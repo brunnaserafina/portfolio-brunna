@@ -3,6 +3,7 @@ import { GithubIcon, LinkedinIcon } from "../common/Icons";
 import ilustration from "../images/ilustration.svg";
 import AboutMe from "./AboutMe";
 import Education from "./Education";
+import Projects from "./Projects";
 
 export default function Home() {
   return (
@@ -51,6 +52,7 @@ export default function Home() {
       </Wrapper>
       <AboutMe />
       <Education />
+      <Projects />
     </>
   );
 }
