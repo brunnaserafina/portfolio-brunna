@@ -93,7 +93,6 @@ export default function Projects() {
 }
 
 const Wrapper = styled.div`
-  height: 100vh;
   padding: 5vw;
 
   h2 {

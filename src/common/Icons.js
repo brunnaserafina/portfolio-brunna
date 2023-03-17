@@ -10,7 +10,7 @@ import {
   FaGraduationCap,
   FaRegLightbulb,
 } from "react-icons/fa";
-import { MdOutlineComputer } from "react-icons/md";
+import { MdOutlineComputer, MdEmail } from "react-icons/md";
 import { HiUserGroup } from "react-icons/hi";
 import { BiConversation } from "react-icons/bi";
 import { DiCss3, DiReact, DiGitMerge } from "react-icons/di";
@@ -23,6 +23,7 @@ import {
   SiExpress,
   SiFirebase,
 } from "react-icons/si";
+import { BsTelephoneFill } from "react-icons/bs";
 
 const GithubIcon = AiFillGithub;
 const LinkedinIcon = AiFillLinkedin;
@@ -49,6 +50,8 @@ const RedisIcon = SiRedis;
 const ExpressIcon = SiExpress;
 const FirebaseIcon = SiFirebase;
 const GitIcon = DiGitMerge;
+const EmailIcon = MdEmail;
+const PhoneIcon = BsTelephoneFill;
 
 export {
   GithubIcon,
@@ -76,4 +79,6 @@ export {
   ExpressIcon,
   FirebaseIcon,
   GitIcon,
+  EmailIcon,
+  PhoneIcon,
 };

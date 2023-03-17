@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { GithubIcon, LinkedinIcon } from "../common/Icons";
 import ilustration from "../images/ilustration.svg";
 import AboutMe from "./AboutMe";
+import Contact from "./Contact";
 import Education from "./Education";
 import Projects from "./Projects";
 
@@ -53,6 +54,7 @@ export default function Home() {
       <AboutMe />
       <Education />
       <Projects />
+      <Contact />
     </>
   );
 }
