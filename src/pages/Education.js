@@ -105,6 +105,7 @@ export default function Education() {
 
 const Wrapper = styled.div`
   width: 100vw;
+  min-height: 100vh;  
   display: flex;
 `;
 
@@ -148,9 +149,6 @@ const Formation = styled.div`
   }
 
   > div > div {
-    //margin-bottom: 50px;
-    //background-color: #a41e11;
-    //border-top-left-radius: 15px;
     padding: 20px;
     border-left: 5px solid #a41e11;
     position: relative;
@@ -160,7 +158,7 @@ const Formation = styled.div`
     list-style: disc;
     margin-left: 20px;
     font-size: 18px;
-    color: black;
+    color: #594645;
   }
 
   img {

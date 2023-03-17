@@ -94,6 +94,7 @@ export default function Projects() {
 
 const Wrapper = styled.div`
   padding: 5vw;
+  min-height: 100vh;
 
   h2 {
     font-size: 30px;
@@ -102,7 +103,7 @@ const Wrapper = styled.div`
   }
 
   img {
-    width: 300px;
+    height: 500px;
     border-top-left-radius: 15px;
     border-bottom: 5px solid #a41e11;
     cursor: pointer;
@@ -116,7 +117,6 @@ const Wrapper = styled.div`
   }
 
   > div div {
-    //background-color: green;
     margin-right: 20px;
     display: flex;
     flex-direction: column;
@@ -144,6 +144,9 @@ const Wrapper = styled.div`
   span {
     position: absolute;
     display: flex;
-  
+  }
+
+  p {
+    margin-bottom: 30px;
   }
 `;

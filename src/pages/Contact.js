@@ -38,9 +38,11 @@ export default function Contact() {
               <input placeholder="Digite aqui o assunto" />
             </div>
           </span>
-
-          <label>Mensagem:</label>
-          <textarea placeholder="Escreva aqui sua mensagem" />
+          <div>
+            <label>Mensagem:</label>
+            <textarea placeholder="Escreva aqui sua mensagem" />
+          </div>
+          <button>Enviar</button>
         </form>
       </TalkToMe>
 
@@ -84,7 +86,7 @@ export default function Contact() {
 }
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,7 +120,8 @@ const TalkToMe = styled.div`
   }
 
   input,
-  textarea {
+  textarea,
+  button {
     border-radius: 10px;
     border: none;
     font-family: Lexend Deca;
@@ -128,7 +131,16 @@ const TalkToMe = styled.div`
   textarea {
     width: 100%;
     min-height: 120px;
+  }
+
+  button {
     margin-bottom: 100px;
+    width: 100%;
+    background-color: #a41e11;
+    color: #ffff;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 10px;
   }
 
   input {
@@ -182,11 +194,12 @@ const Contacts = styled.div`
 
   p {
     color: #594645;
+    margin-bottom: 100px;
   }
 `;
 
 const Footer = styled.div`
-  margin-bottom: 30px;
+  margin: 30px 0px;
   position: absolute;
   bottom: 0;
   color: #594645;
