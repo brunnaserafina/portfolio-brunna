@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import styled from "styled-components";
 import { GithubIcon, LinkedinIcon } from "../common/Icons";
 import ilustration from "../images/ilustration.svg";
@@ -5,8 +6,21 @@ import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Education from "./Education";
 import Projects from "./Projects";
+import curriculo from "../files/CV-BrunnaSerafina.pdf";
 
 export default function Home() {
+  const aboutme = useRef(null);
+  const formation = useRef(null);
+  const projects = useRef(null);
+  const contact = useRef(null);
+
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <Wrapper>
@@ -14,12 +28,12 @@ export default function Home() {
           <h3>{`<Brunna Serafina />`}</h3>
 
           <ul>
-            <li>Sobre Mim</li>
-            <li>Tecnologias</li>
-            <li>Formação</li>
-            <li>Certificações</li>
-            <li>Projetos</li>
-            <li>Contato</li>
+            <li onClick={() => scrollToSection(aboutme)}>Sobre Mim</li>
+            <li onClick={() => scrollToSection(aboutme)}>Tecnologias</li>
+            <li onClick={() => scrollToSection(formation)}>Formação</li>
+            <li onClick={() => scrollToSection(formation)}>Certificações</li>
+            <li onClick={() => scrollToSection(projects)}>Projetos</li>
+            <li onClick={() => scrollToSection(contact)}>Contato</li>
             <li>🌞</li>
           </ul>
         </Header>
@@ -37,24 +51,43 @@ export default function Home() {
           </p>
 
           <button style={{ "background-color": "#a41e11", color: "white" }}>
-            Download CV
+            <a href={curriculo} download="CV - Brunna Serafina">
+              Download CV
+            </a>
           </button>
-          <button>Contato</button>
+          <button onClick={() => scrollToSection(contact)}>Contato</button>
         </Content>
 
         <Footer>
           <span>
-            <GithubIcon />
-            <LinkedinIcon />
+            <a href="https://github.com/brunnaserafina" target="_blank">
+              <GithubIcon />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/brunna-serafina/"
+              target="_blank"
+            >
+              <LinkedinIcon />
+            </a>
           </span>
 
           <img src={ilustration} alt="Ilustração de pessoa programando" />
         </Footer>
       </Wrapper>
-      <AboutMe />
-      <Education />
-      <Projects />
-      <Contact />
+
+      <div ref={aboutme}>
+        <AboutMe />
+      </div>
+      <div ref={formation}>
+        <Education />
+      </div>
+      <div ref={projects}>
+        <Projects />
+      </div>
+      <div ref={contact}>
+        <Contact />
+      </div>
     </>
   );
 }
@@ -121,8 +154,11 @@ const Footer = styled.div`
   width: 100%;
   position: relative;
 
-  span {
+  a {
     color: #a41e11;
+  }
+
+  span {
     font-size: 55px;
     padding: 1vw;
     cursor: pointer;
