@@ -8,8 +8,15 @@ export default function Education() {
         <h2>Formação</h2>
         <div>
           <div>
-            <h3>Análise e Desenvolvimento de Sistemas</h3>
-            <h3>Bacharelado - SENAC EAD</h3>
+            <a
+              href="https://drive.google.com/file/d/1uCkMz9deRt5qPpo7XPJ5rU4-gIJyljCr/view?usp=sharing"
+              target="_blank"
+            >
+              <h3>
+                Análise e Desenvolvimento de Sistemas<br></br>
+                Bacharelado - SENAC EAD
+              </h3>
+            </a>
             <h4>Ago/2021 - Dez/2023</h4>
             <ul>
               <li>
@@ -38,8 +45,15 @@ export default function Education() {
             <span></span>
           </div>
           <div>
-            <h3>Desenvolvimento Web Full Stack</h3>
-            <h3>Bootcamp - Driven Education</h3>
+            <a
+              href="https://e-certificado.com/login/visualizar?c=1637938A52E66D8510882310"
+              target="_blank"
+            >
+              <h3>
+                Desenvolvimento Web Full Stack <br></br>
+                Bootcamp - Driven Education
+              </h3>
+            </a>
             <h4>Mai/2022 - Mar/2023</h4>
             <ul>
               <li>
@@ -77,24 +91,39 @@ export default function Education() {
           <span>
             <FaCertificate fontSize={"55px"} color={"#ffff"} />
             <div>
-              <h3>ALURA</h3>
-              <p>HTML5 e CSS3 parte 1: crie uma página da Web</p>
+              <a
+                href="https://cursos.alura.com.br/user/brunnaserafina/course/html5-css3-primeiros-passos/formalCertificate"
+                target="_blank"
+              >
+                <h3>ALURA</h3>
+                <p>HTML5 e CSS3 parte 1: crie uma página da Web</p>
+              </a>
             </div>
           </span>
 
           <span>
             <FaCertificate fontSize={"55px"} color={"#ffff"} />
             <div>
-              <h3>ALURA</h3>
-              <p>HTML5 e CSS3 parte 2: posicionamento, listas e navegação</p>
+              <a
+                href="https://cursos.alura.com.br/user/brunnaserafina/course/html5-css3-posicionamento-listas-navegacao/formalCertificate"
+                target="_blank"
+              >
+                <h3>ALURA</h3>
+                <p>HTML5 e CSS3 parte 2: posicionamento, listas e navegação</p>
+              </a>
             </div>
           </span>
 
           <span>
             <FaCertificate fontSize={"55px"} color={"#ffff"} />
             <div>
-              <h3>CISCO</h3>
-              <p>Introdução sobre IoT</p>
+              <a
+                href="https://drive.google.com/file/d/1PllET6nhVhlixTZbO0MpIC4J4OYqG9Nh/view"
+                target="_blank"
+              >
+                <h3>CISCO</h3>
+                <p>Introdução sobre IoT</p>
+              </a>
             </div>
           </span>
         </div>
@@ -105,7 +134,7 @@ export default function Education() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  min-height: 100vh;  
+  min-height: 100vh;
   display: flex;
 `;
 
@@ -118,6 +147,11 @@ const Formation = styled.div`
     color: #594645;
     color: #a41e11;
     font-weight: 600;
+  }
+
+  h3:hover {
+    text-decoration: underline;
+    color: #a41e11;
   }
 
   h4 {
@@ -180,6 +214,12 @@ const Certifications = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  > div > span:hover {
+    text-decoration: underline;
+    color: #a41e11;
   }
 
   > div > span h3 {
