@@ -5,8 +5,49 @@ import {
   LinkedinIcon,
   PhoneIcon,
 } from "../common/Icons";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    const templateParams = {
+      from_name: name,
+      subject: subject,
+      message: message,
+      email: email,
+      phone: phone,
+    };
+
+    emailjs
+      .send(
+        "service_hlzg1k7",
+        "template_y27nkig",
+        templateParams,
+        "ClZtahMJijyg_z-ha"
+      )
+      .then(
+        (response) => {
+          console.log("E-mail enviado!", response.status, response.text);
+          setName("");
+          setEmail("");
+          setPhone("");
+          setSubject("");
+          setMessage("");
+        },
+        (err) => {
+          console.log("Erro: ", err);
+        }
+      );
+  }
+
   return (
     <Wrapper>
       <TalkToMe>
@@ -16,33 +57,61 @@ export default function Contact() {
           que em breve entrarei em contato.
         </p>
 
-        <form>
+        <form onSubmit={sendEmail}>
           <span>
             <div>
-              <label>Seu nome:</label>
-              <input placeholder="Digite aqui seu nome" />
+              <label>Seu nome*:</label>
+              <input
+                type="text"
+                placeholder="Digite aqui seu nome"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                required
+              />
             </div>
             <div>
-              <label>E-mail:</label>
-              <input placeholder="email@exemplo.com" />
+              <label>E-mail*:</label>
+              <input
+                type="email"
+                placeholder="email@exemplo.com"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                required
+              />
             </div>
           </span>
 
           <span>
             <div>
               <label>Telefone:</label>
-              <input placeholder="(_ _)_ _ _ _ _ _ _ _ _" />
+              <input
+                type="tel"
+                placeholder="(_ _)_ _ _ _ _- _ _ _ _"
+                onChange={(e) => setPhone(e.target.value)}
+                value={phone}
+              />
             </div>
             <div>
               <label>Assunto:</label>
-              <input placeholder="Digite aqui o assunto" />
+              <input
+                type="text"
+                placeholder="Digite aqui o assunto"
+                onChange={(e) => setSubject(e.target.value)}
+                value={subject}
+              />
             </div>
           </span>
           <div>
-            <label>Mensagem:</label>
-            <textarea placeholder="Escreva aqui sua mensagem" />
+            <label>Mensagem*:</label>
+            <textarea
+              type="text"
+              placeholder="Escreva aqui sua mensagem"
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+              required
+            />
           </div>
-          <button>Enviar</button>
+          <button type="submit">Enviar</button>
         </form>
       </TalkToMe>
 
@@ -53,29 +122,40 @@ export default function Contact() {
             <span>
               <EmailIcon />
             </span>
-            <h5>E-mail</h5>
-            <p>brunnaserafina@gmail.com</p>
+            <a href="mailto:brunnaserafina@gmail.com">
+              <h5>E-mail</h5>
+              <p>brunnaserafina@gmail.com</p>
+            </a>
           </div>
           <div>
             <span>
               <PhoneIcon />
             </span>
-            <h5>Telefone</h5>
-            <p>(48) 99605-9421</p>
+            <a href="tel:+5548996059421">
+              <h5>Telefone</h5>
+              <p>(48) 99605-9421</p>
+            </a>
           </div>
           <div>
             <span>
               <LinkedinIcon />
             </span>
-            <h5>Linkedin</h5>
-            <p>@brunna-serafina</p>
+            <a
+              href="https://www.linkedin.com/in/brunna-serafina/"
+              target="_blank"
+            >
+              <h5>Linkedin</h5>
+              <p>@brunna-serafina</p>
+            </a>
           </div>
           <div>
             <span>
               <GithubIcon />
             </span>
-            <h5>Github</h5>
-            <p>@brunnaserafina</p>
+            <a href="https://github.com/brunnaserafina" target="_blank">
+              <h5>Github</h5>
+              <p>@brunnaserafina</p>
+            </a>
           </div>
         </div>
       </Contacts>
@@ -141,12 +221,18 @@ const TalkToMe = styled.div`
     font-weight: 600;
     font-size: 17px;
     margin-top: 10px;
+    cursor: pointer;
   }
 
   input {
     height: 40px;
     width: 390px;
     margin-bottom: 15px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 16px;
   }
 
   form {
@@ -170,6 +256,16 @@ const Contacts = styled.div`
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    margin: 30px 10px;
+  }
+
+  > div > div a {
+    text-align: center;
+  }
+
+  > div > div a:hover {
+    text-decoration: underline;
+    color: #594645;
   }
 
   span {
@@ -194,7 +290,6 @@ const Contacts = styled.div`
 
   p {
     color: #594645;
-    margin-bottom: 100px;
   }
 `;
 
