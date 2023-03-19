@@ -12,10 +12,18 @@ export default function Projects() {
             alt="Driven Eats"
           />
           <span>
-            <a>
+            <a
+              href="https://github.com/brunnaserafina/driven-eats"
+              target="_blank"
+              title="Confira mais detalhes no repositório do Github"
+            >
               <AiFillGithub />
             </a>
-            <a>
+            <a
+              href="https://brunnaserafina.github.io/driven-eats/"
+              target="_blank"
+              title="Visualizar deploy da aplicação"
+            >
               <AiFillEye />
             </a>
           </span>
@@ -28,10 +36,18 @@ export default function Projects() {
             alt="Zap Recall"
           />
           <span>
-            <a>
+            <a
+              href="https://github.com/brunnaserafina/zap-recall"
+              target="_blank"
+              title="Confira mais detalhes no repositório do Github"
+            >
               <AiFillGithub />
             </a>
-            <a>
+            <a
+              href="https://projeto8-zaprecall-sand-alpha.vercel.app/"
+              target="_blank"
+              title="Visualizar deploy da aplicação"
+            >
               <AiFillEye />
             </a>
           </span>
@@ -45,10 +61,18 @@ export default function Projects() {
             loading="lazy"
           />
           <span>
-            <a>
+            <a
+              href="https://github.com/brunnaserafina/cine-flex"
+              target="_blank"
+              title="Confira mais detalhes no repositório do Github"
+            >
               <AiFillGithub />
             </a>
-            <a>
+            <a
+              href="https://projeto9-cineflex-zeta-fawn.vercel.app/"
+              target="_blank"
+              title="Visualizar deploy da aplicação"
+            >
               <AiFillEye />
             </a>
           </span>
@@ -61,10 +85,18 @@ export default function Projects() {
             alt="Track It"
           />
           <span>
-            <a>
+            <a
+              href="https://github.com/brunnaserafina/track-it"
+              target="_blank"
+              title="Confira mais detalhes no repositório do Github"
+            >
               <AiFillGithub />
             </a>
-            <a>
+            <a
+              href="https://projeto10-trackit-seven-nu.vercel.app/"
+              target="_blank"
+              title="Visualizar deploy da aplicação"
+            >
               <AiFillEye />
             </a>
           </span>
@@ -77,10 +109,18 @@ export default function Projects() {
             alt="My Wallet"
           />
           <span>
-            <a>
+            <a
+              href="https://github.com/brunnaserafina/my-wallet"
+              target="_blank"
+              title="Confira mais detalhes no repositório do Github"
+            >
               <AiFillGithub />
             </a>
-            <a>
+            <a
+              href="https://mywallet-front-omega.vercel.app/"
+              target="_blank"
+              title="Visualizar deploy da aplicação"
+            >
               <AiFillEye />
             </a>
           </span>
@@ -106,7 +146,6 @@ const Wrapper = styled.div`
     height: 500px;
     border-top-left-radius: 15px;
     border-bottom: 5px solid #a41e11;
-    cursor: pointer;
     transition: var(--transition-1);
     position: relative;
   }
@@ -122,6 +161,14 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  > div div:hover img {
+    filter: grayscale(80%) blur(1.5px);
+  }
+
+  > div div:hover span {
+    display: flex;
   }
 
   h4 {
@@ -144,6 +191,7 @@ const Wrapper = styled.div`
   span {
     position: absolute;
     display: flex;
+    display: none;
   }
 
   p {
