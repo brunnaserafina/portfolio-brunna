@@ -7,8 +7,9 @@ import {
 } from "../common/Icons";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import ScrollTop from "../common/ScrollTop";
 
-export default function Contact() {
+export default function Contact({ home, scrollToSection }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -119,40 +120,44 @@ export default function Contact() {
         <h2>Contatos</h2>
         <div>
           <div>
-            <span>
-              <EmailIcon />
-            </span>
             <a href="mailto:brunnaserafina@gmail.com">
+              <span>
+                <EmailIcon />
+              </span>
+
               <h5>E-mail</h5>
               <p>brunnaserafina@gmail.com</p>
             </a>
           </div>
           <div>
-            <span>
-              <PhoneIcon />
-            </span>
             <a href="tel:+5548996059421">
+              <span>
+                <PhoneIcon />
+              </span>
+
               <h5>Telefone</h5>
               <p>(48) 99605-9421</p>
             </a>
           </div>
           <div>
-            <span>
-              <LinkedinIcon />
-            </span>
             <a
               href="https://www.linkedin.com/in/brunna-serafina/"
               target="_blank"
             >
+              <span>
+                <LinkedinIcon />
+              </span>
+
               <h5>Linkedin</h5>
               <p>@brunna-serafina</p>
             </a>
           </div>
           <div>
-            <span>
-              <GithubIcon />
-            </span>
             <a href="https://github.com/brunnaserafina" target="_blank">
+              <span>
+                <GithubIcon />
+              </span>
+
               <h5>Github</h5>
               <p>@brunnaserafina</p>
             </a>
@@ -161,6 +166,8 @@ export default function Contact() {
       </Contacts>
 
       <Footer>Copyright © 2023 Brunna Serafina</Footer>
+
+      <ScrollTop home={home} scrollToSection={scrollToSection} />
     </Wrapper>
   );
 }
@@ -250,6 +257,12 @@ const Contacts = styled.div`
     display: flex;
   }
 
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   > div > div {
     display: flex;
     flex-direction: column;
@@ -279,6 +292,14 @@ const Contacts = styled.div`
     border-radius: 50%;
     color: #ffff;
     margin-bottom: 10px;
+  }
+
+  span:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
 
   h5 {

@@ -1,3 +1,4 @@
+import { IoIosArrowDropupCircle } from "react-icons/io";
 import styled from "styled-components";
 import {
   CertificateIcon,
@@ -24,8 +25,9 @@ import {
   TypeScriptIcon,
   WebIcon,
 } from "../common/Icons";
+import ScrollTop from "../common/ScrollTop";
 
-export default function AboutMe() {
+export default function AboutMe({ home, scrollToSection }) {
   return (
     <Wrapper>
       <About>
@@ -176,6 +178,7 @@ export default function AboutMe() {
           </div>
         </div>
       </Technologies>
+      <ScrollTop home={home} scrollToSection={scrollToSection} />
     </Wrapper>
   );
 }
@@ -187,6 +190,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const About = styled.div`

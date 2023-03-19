@@ -9,6 +9,7 @@ import Projects from "./Projects";
 import curriculo from "../files/CV-BrunnaSerafina.pdf";
 
 export default function Home() {
+  const home = useRef(null);
   const aboutme = useRef(null);
   const formation = useRef(null);
   const projects = useRef(null);
@@ -23,10 +24,11 @@ export default function Home() {
 
   return (
     <>
-      <Wrapper>
+      <Wrapper ref={home}>
         <Header>
-          <h3>{`<Brunna Serafina />`}</h3>
-
+          <div>
+            <h3>{`<Brunna Serafina />`}</h3>
+          </div>
           <ul>
             <li onClick={() => scrollToSection(aboutme)}>Sobre Mim</li>
             <li onClick={() => scrollToSection(aboutme)}>Tecnologias</li>
@@ -77,16 +79,16 @@ export default function Home() {
       </Wrapper>
 
       <div ref={aboutme}>
-        <AboutMe />
+        <AboutMe home={home} scrollToSection={scrollToSection} />
       </div>
       <div ref={formation}>
-        <Education />
+        <Education home={home} scrollToSection={scrollToSection} />
       </div>
       <div ref={projects}>
-        <Projects />
+        <Projects home={home} scrollToSection={scrollToSection} />
       </div>
       <div ref={contact}>
-        <Contact />
+        <Contact home={home} scrollToSection={scrollToSection} />
       </div>
     </>
   );
@@ -147,6 +149,14 @@ const Content = styled.div`
     margin-top: 0.5vh;
     min-width: 6vw;
     cursor: pointer;
+  }
+
+  button:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
 `;
 

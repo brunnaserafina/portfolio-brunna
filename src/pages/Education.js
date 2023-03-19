@@ -1,7 +1,8 @@
 import { FaCertificate } from "react-icons/fa";
 import styled from "styled-components";
+import ScrollTop from "../common/ScrollTop";
 
-export default function Education() {
+export default function Education({ home, scrollToSection }) {
   return (
     <Wrapper>
       <Formation>
@@ -128,6 +129,7 @@ export default function Education() {
           </span>
         </div>
       </Certifications>
+      <ScrollTop home={home} scrollToSection={scrollToSection} />
     </Wrapper>
   );
 }
@@ -136,6 +138,7 @@ const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
   display: flex;
+  position: relative;
 `;
 
 const Formation = styled.div`
