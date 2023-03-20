@@ -267,6 +267,7 @@ const About = styled.div`
 
     h2 {
       font-size: 25px;
+      margin-bottom: 20px;
     }
   }
 `;
@@ -326,6 +327,7 @@ const Technologies = styled.div`
 
     h2 {
       font-size: 25px;
+      margin-bottom: 20px;  
     }
   }
 `;

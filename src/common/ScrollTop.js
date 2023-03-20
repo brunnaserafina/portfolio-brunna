@@ -21,9 +21,16 @@ const Wrapper = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 900px){
-    span{
-        font-size: 45px;
+  @media (max-width: 900px) {
+    //background-color: red;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    span {
+      font-size: 45px;
+      //background-color: gray;
+      position: initial;
     }
   }
 `;

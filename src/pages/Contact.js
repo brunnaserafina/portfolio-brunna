@@ -120,26 +120,6 @@ export default function Contact({ home, scrollToSection }) {
         <h2>Contatos</h2>
         <div>
           <div>
-            <a href="mailto:brunnaserafina@gmail.com">
-              <span>
-                <EmailIcon />
-              </span>
-
-              <h5>E-mail</h5>
-              <p>brunnaserafina@gmail.com</p>
-            </a>
-          </div>
-          <div>
-            <a href="tel:+5548996059421">
-              <span>
-                <PhoneIcon />
-              </span>
-
-              <h5>Telefone</h5>
-              <p>(48) 99605-9421</p>
-            </a>
-          </div>
-          <div>
             <a
               href="https://www.linkedin.com/in/brunna-serafina/"
               target="_blank"
@@ -162,12 +142,31 @@ export default function Contact({ home, scrollToSection }) {
               <p>@brunnaserafina</p>
             </a>
           </div>
+          <div>
+            <a href="tel:+5548996059421">
+              <span>
+                <PhoneIcon />
+              </span>
+
+              <h5>Telefone</h5>
+              <p>(48) 99605-9421</p>
+            </a>
+          </div>
+          <div>
+            <a href="mailto:brunnaserafina@gmail.com">
+              <span>
+                <EmailIcon />
+              </span>
+
+              <h5>E-mail</h5>
+              <p>brunnaserafina@gmail.com</p>
+            </a>
+          </div>
         </div>
       </Contacts>
+      <ScrollTop home={home} scrollToSection={scrollToSection} />
 
       <Footer>Copyright © 2023 Brunna Serafina</Footer>
-
-      <ScrollTop home={home} scrollToSection={scrollToSection} />
     </Wrapper>
   );
 }
@@ -250,6 +249,36 @@ const TalkToMe = styled.div`
     display: flex;
     justify-content: space-between;
   }
+
+  @media (max-width: 900px) {
+    width: 85vw;
+
+    h2 {
+      font-size: 25px;
+      margin-top: 35px;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 16px;
+    }
+
+    form {
+      width: 85vw;
+    }
+
+    input {
+      width: 85vw;
+    }
+
+    form span {
+      flex-direction: column;
+    }
+
+    label {
+      margin: 2.5px 0px;
+    }
+  }
 `;
 
 const Contacts = styled.div`
@@ -313,11 +342,27 @@ const Contacts = styled.div`
   p {
     color: #594645;
   }
+
+  @media (max-width: 900px) {
+    > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+  }
 `;
 
 const Footer = styled.div`
-  margin: 30px 0px;
-  position: absolute;
+  margin: 50px 0px 30px 0px;
+  position: relative;
   bottom: 0;
   color: #594645;
 `;

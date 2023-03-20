@@ -138,11 +138,11 @@ export default function Projects({ home, scrollToSection }) {
 }
 const Wrapper = styled.div`
   position: relative;
+  min-height: 100vh;
 `;
 
 const Container = styled.div`
   padding: 5vw;
-  min-height: 100vh;
 
   h2 {
     font-size: 30px;
@@ -207,7 +207,7 @@ const Container = styled.div`
   }
 
   @media (max-width: 900px) {
-    h2{
+    h2 {
       font-size: 25px;
     }
     > div {

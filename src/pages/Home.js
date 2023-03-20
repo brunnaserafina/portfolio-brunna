@@ -134,14 +134,14 @@ const MenuList = styled.div`
   left: 0;
   margin-top: 45px;
   padding: 15px;
-  background-color: #ef8f58;
+  background-color: #FF7F50;
 
   li {
     list-style: none;
     color: #ffff;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     font-weight: 500;
-    font-size: 19px;
+    font-size: 20px;
     color: #594645;
   }
 
@@ -257,9 +257,25 @@ const Footer = styled.div`
     bottom: 0;
     right: 0;
     width: 550px;
+  }
 
-    @media (max-width: 900px) {
+  @media (max-width: 900px) {
+    width: 100%;
+    position: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
       display: none;
+    }
+
+    span {
+      font-size: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 55px;
     }
   }
 `;
