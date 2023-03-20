@@ -255,6 +255,7 @@ const TalkToMe = styled.div`
 const Contacts = styled.div`
   > div {
     display: flex;
+    margin-bottom: 60px;
   }
 
   a {

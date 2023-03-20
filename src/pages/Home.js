@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styled from "styled-components";
 import { GithubIcon, LinkedinIcon } from "../common/Icons";
 import ilustration from "../images/ilustration.svg";
@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Education from "./Education";
 import Projects from "./Projects";
 import curriculo from "../files/CV-BrunnaSerafina.pdf";
+import { AiOutlineMenu } from "react-icons/ai";
 
 export default function Home() {
   const home = useRef(null);
@@ -14,6 +15,7 @@ export default function Home() {
   const formation = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -22,6 +24,10 @@ export default function Home() {
     });
   };
 
+  function openMenuHamburger() {
+    setOpenMenu(!openMenu);
+  }
+
   return (
     <>
       <Wrapper ref={home}>
@@ -29,6 +35,11 @@ export default function Home() {
           <div>
             <h3>{`<Brunna Serafina />`}</h3>
           </div>
+
+          <MenuHamburger onClick={openMenuHamburger}>
+            {openMenu ? "X" : <AiOutlineMenu />}
+          </MenuHamburger>
+
           <ul>
             <li onClick={() => scrollToSection(aboutme)}>Sobre Mim</li>
             <li onClick={() => scrollToSection(aboutme)}>Tecnologias</li>
@@ -38,6 +49,19 @@ export default function Home() {
             <li onClick={() => scrollToSection(contact)}>Contato</li>
             <li>🌞</li>
           </ul>
+
+          {openMenu ? (
+            <MenuList>
+              <li onClick={() => scrollToSection(aboutme)}>Sobre Mim</li>
+              <li onClick={() => scrollToSection(aboutme)}>Tecnologias</li>
+              <li onClick={() => scrollToSection(formation)}>Formação</li>
+              <li onClick={() => scrollToSection(formation)}>Certificações</li>
+              <li onClick={() => scrollToSection(projects)}>Projetos</li>
+              <li onClick={() => scrollToSection(contact)}>Contato</li>
+            </MenuList>
+          ) : (
+            ""
+          )}
         </Header>
 
         <Content>
@@ -94,6 +118,38 @@ export default function Home() {
   );
 }
 
+const MenuHamburger = styled.div`
+  display: none;
+  font-size: 25px;
+
+  @media (max-width: 900px) {
+    display: inline;
+  }
+`;
+
+const MenuList = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  margin-top: 45px;
+  padding: 15px;
+  background-color: #ef8f58;
+
+  li {
+    list-style: none;
+    color: #ffff;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 19px;
+    color: #594645;
+  }
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+`;
+
 const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
@@ -124,6 +180,16 @@ const Header = styled.div`
     margin-right: 0.5vw;
     cursor: pointer;
   }
+
+  @media (max-width: 900px) {
+    ul {
+      display: none;
+    }
+
+    h3 {
+      font-size: 25px;
+    }
+  }
 `;
 
 const Content = styled.div`
@@ -136,6 +202,7 @@ const Content = styled.div`
     color: #594645;
     font-size: 18px;
     width: 400px;
+    margin: 5px 0;
   }
 
   button {
@@ -158,6 +225,17 @@ const Content = styled.div`
     -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 45px;
+    }
+
+    p {
+      width: 70vw;
+      text-align: justify;
+    }
+  }
 `;
 
 const Footer = styled.div`
@@ -179,5 +257,9 @@ const Footer = styled.div`
     bottom: 0;
     right: 0;
     width: 550px;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
 `;
