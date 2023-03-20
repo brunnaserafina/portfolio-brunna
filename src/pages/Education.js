@@ -90,7 +90,9 @@ export default function Education({ home, scrollToSection }) {
 
         <div>
           <span>
-            <FaCertificate fontSize={"55px"} color={"#ffff"} />
+            <span>
+              <FaCertificate />
+            </span>
             <div>
               <a
                 href="https://cursos.alura.com.br/user/brunnaserafina/course/html5-css3-primeiros-passos/formalCertificate"
@@ -103,7 +105,9 @@ export default function Education({ home, scrollToSection }) {
           </span>
 
           <span>
-            <FaCertificate fontSize={"55px"} color={"#ffff"} />
+            <span>
+              <FaCertificate />
+            </span>
             <div>
               <a
                 href="https://cursos.alura.com.br/user/brunnaserafina/course/html5-css3-posicionamento-listas-navegacao/formalCertificate"
@@ -116,7 +120,9 @@ export default function Education({ home, scrollToSection }) {
           </span>
 
           <span>
-            <FaCertificate fontSize={"55px"} color={"#ffff"} />
+            <span>
+              <FaCertificate />
+            </span>
             <div>
               <a
                 href="https://drive.google.com/file/d/1PllET6nhVhlixTZbO0MpIC4J4OYqG9Nh/view"
@@ -139,6 +145,10 @@ const Wrapper = styled.div`
   min-height: 100vh;
   display: flex;
   position: relative;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const Formation = styled.div`
@@ -160,7 +170,6 @@ const Formation = styled.div`
   h4 {
     font-size: 20px;
     margin-bottom: 5px;
-    color: #594645;
     color: #a41e11;
   }
 
@@ -201,6 +210,26 @@ const Formation = styled.div`
   img {
     margin-right: 10px;
   }
+
+  @media (max-width: 900px) {
+    width: 95vw;
+
+    h2 {
+      font-size: 25px;
+    }
+
+    h3 {
+      font-size: 19px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    li {
+      font-size: 16px;
+    }
+  }
 `;
 
 const Certifications = styled.div`
@@ -237,5 +266,31 @@ const Certifications = styled.div`
     color: #a41e11;
     font-weight: 700;
     margin-left: 10px;
+  }
+
+  > div > span > span {
+      color: #ffff;
+      font-size: 50px;
+    }
+
+  @media (max-width: 900px) {
+    width: 95vw;
+
+    h2 {
+      font-size: 25px;
+    }
+
+    > div > span h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    > div > span > span {
+      color: #ffff;
+      font-size: 40px;
+    }
   }
 `;

@@ -131,6 +131,7 @@ export default function Projects({ home, scrollToSection }) {
           </div>
         </div>
       </Container>
+
       <ScrollTop home={home} scrollToSection={scrollToSection} />
     </Wrapper>
   );
@@ -203,5 +204,15 @@ const Container = styled.div`
 
   p {
     margin-bottom: 30px;
+  }
+
+  @media (max-width: 900px) {
+    h2{
+      font-size: 25px;
+    }
+    > div {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
   }
 `;
