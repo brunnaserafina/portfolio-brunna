@@ -21,26 +21,27 @@ export default function Education({ home, scrollToSection }) {
             <h4>Ago/2021 - Dez/2023</h4>
             <ul>
               <li>
-                Formação de +2016h focada em soluções tecnológicas para negócios
-                empresariais.
+                Em 2021, eu já tinha certeza que gostaria de trabalhar na área
+                de desenvolvimento;
               </li>
               <li>
-                Conceitos de: Gerenciamento de projetos; Fundamentos da
-                administração; Pesquisa e sociedade; Ética, cidadania e
-                sustentabilidade; Empreendedorismo.
+                Decidi então me matricular em uma das melhores faculdade de
+                ensino EAD, o SENAC;
               </li>
               <li>
-                Teoria e prática envolvendo: Conceitos de Computação; Algoritmos
-                e Programação;
+                Desenvolvi projetos em equipe envolvendo concepção de ideias de
+                aplicativos com aproximadamente oito integrantes e relacionados
+                às disciplinas de cada fase;
               </li>
               <li>
-                Infraestrutura da Tecnologia da Informação; Análise de Sistemas;
-                Modelagem de banco de dados; Engenharia de Software; Estrutura
-                de dados; Programação orientada à objetos;
-              </li>
-              <li>
-                Sistemas operacionais; Linguagens de Servidor; Sistemas
-                distribuídos.
+                Dentre as principais disciplinas que tive contato tanto com a
+                teoria e prática, posso citar: Algoritmos e Programação,
+                Conceitos de Computação, Banco de Dados, Programação Web,
+                Engenharia de Software, Estrutura de Dados, Introdução a
+                Sistemas Operacionais, Programação Orientada a Objetos, Sistemas
+                Móveis Distribuídos, Gerenciamento de Projetos, Arquitetura de
+                Software, Desenvolvimento de Sistemas Web, Tecnologias para
+                Dispositivos Móveis,
               </li>
             </ul>
             <span></span>
@@ -58,27 +59,42 @@ export default function Education({ home, scrollToSection }) {
             <h4>Mai/2022 - Mar/2023</h4>
             <ul>
               <li>
-                Formação intensiva de +1.200h focadas em +25 projetos práticos.
+                Apesar do meu curso de graduação ser ótimo, percebi que focava
+                muito mais na teoria e que eu precisaria me alinhar melhor com o
+                que o mercado de trabalho exigia;
               </li>
               <li>
-                Front-end e back-end com as tecnologias web: React, Node.js,
-                TypeScript e Prisma.
+                Em 2022, decidi então participar do processo seletivo do curso
+                da Driven Education;
               </li>
               <li>
-                Fundamentos da engenharia de software: lógica, algoritmos,
-                estrutura de dados, POO, arquitetura, otimização, performance e
-                clean code.
+                Apesar da alta concorrência, conquistei minha vaga e foi onde
+                obtive a maior parte da minha experiência prática, foram nove
+                meses com entregas de projetos toda semana, tanto individuais
+                quanto em equipe;
               </li>
               <li>
-                Bancos de dados relacionais e não relacionais com Postgres,
-                Mongo e Redis.
+                Nos trabalhos em equipe utilizamos metodologias ágeis (Scrum),
+                desenvolvemos competências comportamentais e habilidades
+                profissionais;
               </li>
-              <li>Princípios de DevOps com GitHub Actions, Docker e AWS.</li>
-              <li>Testes unitários, integração e ponta a ponta com Jest.</li>
               <li>
-                Trabalhos em equipe usando metodologias ágeis (Scrum),
-                desenvolvimento de competências comportamentais e habilidades
-                profissionais.
+                Tive contato com as tecnologias React, Node.js, TypeScript e
+                Prisma;
+              </li>
+              <li>
+                Estudei fundamentos da engenharia de software: lógica,
+                algoritmos, estrutura de dados, POO, arquitetura, otimização,
+                performance e clean code;
+              </li>
+              <li>
+                Aprendi e fiz projetos com bancos de dados relacionais e não
+                relacionais com Postgres, Mongo e Redis;
+              </li>
+              <li>Desenvolvi testes de integração com Jest;</li>
+              <li>
+                E coloquei em prática princípios de DevOps com GitHub Actions,
+                Docker e AWS.
               </li>
             </ul>
             <span></span>
@@ -203,8 +219,9 @@ const Formation = styled.div`
   li {
     list-style: disc;
     margin-left: 20px;
-    font-size: 18px;
+    font-size: 19px;
     color: #594645;
+    margin-bottom: 2px;
   }
 
   img {
@@ -269,9 +286,9 @@ const Certifications = styled.div`
   }
 
   > div > span > span {
-      color: #ffff;
-      font-size: 50px;
-    }
+    color: #ffff;
+    font-size: 50px;
+  }
 
   @media (max-width: 900px) {
     width: 95vw;

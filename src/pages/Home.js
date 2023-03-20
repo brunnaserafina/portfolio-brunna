@@ -47,7 +47,6 @@ export default function Home() {
             <li onClick={() => scrollToSection(formation)}>Certificações</li>
             <li onClick={() => scrollToSection(projects)}>Projetos</li>
             <li onClick={() => scrollToSection(contact)}>Contato</li>
-            <li>🌞</li>
           </ul>
 
           {openMenu ? (
@@ -71,9 +70,12 @@ export default function Home() {
           </h1>
 
           <p>
-            Olá, eu sou a Brunna. Seja bem-vindo(a) ao meu portfólio! Aqui você
-            irá encontrar informações sobre mim, minha formação, skills e
-            projetos que desenvolvi. Dúvidas? Entre em contato.
+            Olá, eu sou a Brunna Serafina, seja bem-vindo(a) ao meu portfólio!
+            Sou desenvolvedora web full stack e fascinada pelo vasto
+            mundo da tecnologia desde 2021. Meu foco é resolver problemas
+            encontrando as melhores soluções e tecnologias, para isso venho me
+            especializando, enfrentando desafios e ampliando meus
+            conhecimentos diariamente.
           </p>
 
           <button style={{ "background-color": "#a41e11", color: "white" }}>
@@ -134,7 +136,7 @@ const MenuList = styled.div`
   left: 0;
   margin-top: 45px;
   padding: 15px;
-  background-color: #FF7F50;
+  background-color: #ff7f50;
 
   li {
     list-style: none;
@@ -203,6 +205,7 @@ const Content = styled.div`
     font-size: 18px;
     width: 400px;
     margin: 5px 0;
+    text-align: justify;
   }
 
   button {
