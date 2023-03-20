@@ -240,6 +240,35 @@ const About = styled.div`
     color: #a41e11;
     font-weight: 600;
   }
+
+  @media (max-width: 900px) {
+    text-align: center;
+
+    > div {
+      width: 90vw;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    > div > div {
+      margin-bottom: 10px;
+      height: 150px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    span {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+  }
 `;
 
 const Technologies = styled.div`
@@ -254,6 +283,7 @@ const Technologies = styled.div`
   > div {
     margin-bottom: 50px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
@@ -288,5 +318,14 @@ const Technologies = styled.div`
   p {
     color: #ffff;
     text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    width: 90vw;
+    text-align: center;
+
+    h2 {
+      font-size: 25px;
+    }
   }
 `;

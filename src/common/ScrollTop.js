@@ -20,4 +20,10 @@ const Wrapper = styled.div`
     right: 40px;
     cursor: pointer;
   }
+
+  @media (max-width: 900px){
+    span{
+        font-size: 45px;
+    }
+  }
 `;
