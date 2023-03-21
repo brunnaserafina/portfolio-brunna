@@ -219,9 +219,9 @@ const Formation = styled.div`
   li {
     list-style: disc;
     margin-left: 20px;
-    font-size: 19px;
+    font-size: 17px;
     color: #594645;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
   }
 
   img {

@@ -41,20 +41,26 @@ export default function Home() {
           </MenuHamburger>
 
           <ul>
-            <li onClick={() => scrollToSection(aboutme)}>Sobre Mim</li>
-            <li onClick={() => scrollToSection(aboutme)}>Tecnologias</li>
-            <li onClick={() => scrollToSection(formation)}>Formação</li>
-            <li onClick={() => scrollToSection(formation)}>Certificações</li>
+            <li onClick={() => scrollToSection(aboutme)}>
+              Sobre Mim & Tecnologias
+            </li>
+
+            <li onClick={() => scrollToSection(formation)}>
+              Formação & Certificações
+            </li>
+
             <li onClick={() => scrollToSection(projects)}>Projetos</li>
             <li onClick={() => scrollToSection(contact)}>Contato</li>
           </ul>
 
           {openMenu ? (
             <MenuList>
-              <li onClick={() => scrollToSection(aboutme)}>Sobre Mim</li>
-              <li onClick={() => scrollToSection(aboutme)}>Tecnologias</li>
-              <li onClick={() => scrollToSection(formation)}>Formação</li>
-              <li onClick={() => scrollToSection(formation)}>Certificações</li>
+              <li onClick={() => scrollToSection(aboutme)}>
+                Sobre Mim & Tecnologias
+              </li>
+              <li onClick={() => scrollToSection(formation)}>
+                Formação & Certificações
+              </li>
               <li onClick={() => scrollToSection(projects)}>Projetos</li>
               <li onClick={() => scrollToSection(contact)}>Contato</li>
             </MenuList>
@@ -71,11 +77,10 @@ export default function Home() {
 
           <p>
             Olá, eu sou a Brunna Serafina, seja bem-vindo(a) ao meu portfólio!
-            Sou desenvolvedora web full stack e fascinada pelo vasto
-            mundo da tecnologia desde 2021. Meu foco é resolver problemas
-            encontrando as melhores soluções e tecnologias, para isso venho me
-            especializando, enfrentando desafios e ampliando meus
-            conhecimentos diariamente.
+            Sou desenvolvedora web full stack e fascinada pelo vasto mundo da
+            tecnologia desde 2021. Meu foco é resolver problemas encontrando as
+            melhores soluções e tecnologias, para isso venho me especializando,
+            enfrentando desafios e ampliando meus conhecimentos diariamente.
           </p>
 
           <button style={{ "background-color": "#a41e11", color: "white" }}>
@@ -179,7 +184,7 @@ const Header = styled.div`
   }
 
   li {
-    margin-right: 0.5vw;
+    margin-right: 1vw;
     cursor: pointer;
   }
 

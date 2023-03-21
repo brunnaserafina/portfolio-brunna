@@ -254,6 +254,7 @@ const About = styled.div`
 
     > div > div {
       margin-bottom: 10px;
+      width: 130px;
       height: 150px;
     }
 
@@ -327,7 +328,19 @@ const Technologies = styled.div`
 
     h2 {
       font-size: 25px;
-      margin-bottom: 20px;  
+      margin-bottom: 20px;
+    }
+
+    > div > div {
+      width: 90px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    span{
+      font-size: 35px;
     }
   }
 `;

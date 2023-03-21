@@ -1,8 +1,12 @@
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import styled from "styled-components";
 import ScrollTop from "../common/ScrollTop";
+import MoreInfo from "./MoreInfo";
+import { useState } from "react";
 
 export default function Projects({ home, scrollToSection }) {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <Wrapper>
       <Container>
@@ -12,6 +16,8 @@ export default function Projects({ home, scrollToSection }) {
             <img
               src="https://user-images.githubusercontent.com/106851605/215218719-a3ad2210-4f01-49c2-bb46-edd70bc236d6.gif"
               alt="Driven Eats"
+              title="Clique para mais detalhes sobre o projeto"
+              onClick={() => setSelectedImage(1)}
             />
             <span>
               <a
@@ -36,6 +42,7 @@ export default function Projects({ home, scrollToSection }) {
             <img
               src="https://user-images.githubusercontent.com/106851605/215243342-7cd13977-4fc1-4be1-8c87-84d13274f20d.gif"
               alt="Zap Recall"
+              onClick={() => setSelectedImage(2)}
             />
             <span>
               <a
@@ -60,7 +67,8 @@ export default function Projects({ home, scrollToSection }) {
             <img
               src="https://user-images.githubusercontent.com/106851605/215249931-aa353632-c44f-4660-ba70-975897995f74.gif"
               alt="Cine Flex"
-              loading="lazy"
+              title="Clique para mais detalhes sobre o projeto"
+              onClick={() => setSelectedImage(3)}
             />
             <span>
               <a
@@ -78,13 +86,14 @@ export default function Projects({ home, scrollToSection }) {
                 <AiFillEye />
               </a>
             </span>
-            <h4>Cine Flex</h4>
-            <p>Front-end</p>
+            <h4 onClick={() => setSelectedImage(3)}>Cine Flex</h4>
+            <p onClick={() => setSelectedImage(3)}>Front-end</p>
           </div>
           <div>
             <img
               src="https://user-images.githubusercontent.com/106851605/215271833-8eb725f3-43d6-4210-ae19-8af2f5ae0388.gif"
               alt="Track It"
+              onClick={() => setSelectedImage(4)}
             />
             <span>
               <a
@@ -109,7 +118,10 @@ export default function Projects({ home, scrollToSection }) {
             <img
               src="https://user-images.githubusercontent.com/106851605/215290848-75eca464-25fb-4f34-a2f1-508f34a8bfcf.gif"
               alt="My Wallet"
+              onClick={() => setSelectedImage(5)}
+              title="Clique para mais detalhes sobre o projeto"
             />
+
             <span>
               <a
                 href="https://github.com/brunnaserafina/my-wallet"
@@ -132,10 +144,17 @@ export default function Projects({ home, scrollToSection }) {
         </div>
       </Container>
 
+      {selectedImage !== null ? (
+        <MoreInfo id={selectedImage} setSelectedImage={setSelectedImage} />
+      ) : (
+        ""
+      )}
+
       <ScrollTop home={home} scrollToSection={scrollToSection} />
     </Wrapper>
   );
 }
+
 const Wrapper = styled.div`
   position: relative;
   min-height: 100vh;
@@ -156,6 +175,7 @@ const Container = styled.div`
     border-bottom: 5px solid #a41e11;
     transition: var(--transition-1);
     position: relative;
+    cursor: pointer;
   }
 
   > div {
@@ -183,6 +203,7 @@ const Container = styled.div`
     margin-top: 15px;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
   }
 
   a {
@@ -204,6 +225,11 @@ const Container = styled.div`
 
   p {
     margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  h4:hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 900px) {
