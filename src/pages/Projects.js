@@ -240,5 +240,14 @@ const Container = styled.div`
       flex-wrap: nowrap;
       overflow-x: auto;
     }
+
+    > div div:hover span {
+      display: none;
+    }
+
+    > div div:hover img {
+    filter: none;
+  }
+
   }
 `;

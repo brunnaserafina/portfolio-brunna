@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import { SiReactrouter } from "react-icons/si";
 import styled from "styled-components";
 import {
   CssIcon,
   HtmlIcon,
   JavaScriptIcon,
+  MongoIcon,
+  NodejsIcon,
   ReactIcon,
   StyledIcon,
 } from "../common/Icons";
@@ -14,7 +17,7 @@ export default function MoreInfo({ id, setSelectedImage }) {
     {
       id: 1,
       name: "Driven Eats",
-      text: "Este é um site mobile de um restaurante especial que entrega seu pedido em 6 minutos e possui um cardápio diferenciado, inspirado na cultura gastronômica de países do mundo todo. Escolha um prato, uma bebida e uma sobremesa para fechar seu pedido. Após a confirmação, você será encaminhado para o WhatsApp do restaurante.",
+      text: "Este foi o meu primeiro projeto utilizando JavaScript. É um site mobile de um restaurante especial que entrega o pedido do cliente em 6 minutos e possui um cardápio diferenciado, inspirado na cultura gastronômica de países do mundo todo. O usuário deve escolher um prato, uma bebida e uma sobremesa para fechar o pedido. Após a confirmação, será encaminhado para o WhatsApp do restaurante. Possui funcionalidades como seleção das opções, habilitação de botão depois de completar o pedido, opção de cancelar o pedido, enviar para WhatsApp, mensagem de acordo com o pedido e digitar nome do usuário e endereço de entrega. Meu principal desafio foi implementar a lógica de validações e enviar para o WhatsApp do cliente, ver pela primeira vez uma aplicação funcionando e poder mandar pra várias pessoas testarem foi incrível!",
       image:
         "https://user-images.githubusercontent.com/106851605/215218719-a3ad2210-4f01-49c2-bb46-edd70bc236d6.gif",
       tech: [
@@ -28,7 +31,7 @@ export default function MoreInfo({ id, setSelectedImage }) {
     {
       id: 2,
       name: "Zap Recall",
-      text: "Esta aplicação é uma página web de flashcards.",
+      text: "Este foi o meu segundo projeto utilizando React: uma página web de flashcards. Flashcards são cartões que contém uma pergunta/afirmação na sua frente e uma resposta atrás. É possível utilizá-los para treinar a memória e estudar. A ideia é ler a pergunta ou afirmação e tentar lembrar da reposta. Ao se deparar com a mesma, dependendo do esforço necessário para responder ou não o flashcard, o usuário fica consciente de quais conteúdos estão frescos na memória e quais não estão, então, pode praticar com frequência os conteúdos que não estão. Quando lembramos instantaneamente de um flashcard, tivemos um Zap! Algumas das funcionalidades implementadas foram: iniciar exercício, abrir flashcards, virar card para verificar a reposta, selecionar 'Não lembrei', 'Quase não lembrei' ou 'Zap', rodapé dinâmico ao longo do jogo e tela de conclusão com opção de reiniciar.",
       image:
         "https://user-images.githubusercontent.com/106851605/215243342-7cd13977-4fc1-4be1-8c87-84d13274f20d.gif",
       tech: [
@@ -41,12 +44,13 @@ export default function MoreInfo({ id, setSelectedImage }) {
     {
       id: 3,
       name: "Cine Flex",
-      text: "Esta é uma Single-Page Application para facilitar as reservas de filme no cinema, você pode escolher o filme, a sessão e o assento.",
+      text: "Esta é uma Single-Page Application onde utilizei React Router pela primeira vez. A aplicação foi desenvolvida com o objetivo de facilitar as reservas de filmes no cinema, sendo possível escolher também a sessão e o assento. Meu maior desafio foi utilizar pela primeira vez uma API existente para implementar funcionalidades de tela de escolha de filme, tela de escolha de sessão, tela de escolha de assento, rodapé dinâmico ao longo das telas, identificar nome e CPF do comprador e visualizar resumo da reserva.",
       image:
         "https://user-images.githubusercontent.com/106851605/215249931-aa353632-c44f-4660-ba70-975897995f74.gif",
       tech: [
         { icon: <ReactIcon />, name: "ReactJS" },
         { icon: <CssIcon />, name: "CSS" },
+        { icon: <SiReactrouter />, name: "React Router" },
       ],
       github: "https://github.com/brunnaserafina/cine-flex",
       deploy: "https://projeto9-cineflex-zeta-fawn.vercel.app",
@@ -54,7 +58,7 @@ export default function MoreInfo({ id, setSelectedImage }) {
     {
       id: 4,
       name: "Track It",
-      text: "Esta é uma página web para dispositivos mobile, rastreadora de hábitos.",
+      text: "Neste projeto foi a primeira vez que utilizei vários tipos de bibliotecas durante o desenvolvimento, foi desafiador ler a documentação e testar várias vezes a usabilidade. A aplicação se trata de uma página web para dispositivos mobile, rastreadora de hábitos. É possível cadastrar um hábito, selecionar os dias da semana que deseja colocá-lo em prática e visualizar seu progresso durante os dias. Para isto, implementei funcionalidades como cadastro e login, adicionar foto de usuário, menu dinâmico, criar hábito, deletar hábito, listagem de todos os hábitos, visualizar hábitos do dia e sequência mais alta de dias cumpridos.",
       image:
         "https://user-images.githubusercontent.com/106851605/215271833-8eb725f3-43d6-4210-ae19-8af2f5ae0388.gif",
       tech: [
@@ -67,12 +71,14 @@ export default function MoreInfo({ id, setSelectedImage }) {
     {
       id: 5,
       name: "My Wallet",
-      text: "Esta é uma aplicação web mobile para controle de gastos, ajudando você a se organizar financeiramente.",
+      text: "Este foi meu primeiro projeto full-stack. É uma aplicação web mobile para controle de gastos, ajudando o usuário a se organizar financeiramente. É possível acompanhar as receitas e despesas para saber como gasta o dinheiro e quanto tem. Possui funcionalidade de cadastro, login, logout, CRUD de transações (Create, Read, Update e Delete), opções de entradas e saídas de dinheiro, extrato e saldo. Dentre os desafios que enfrentei, o maior foi que pela primeira vez tive que desenvolver pensando em um back-end que fosse funcional para o front-end e um front-end que soubesse interpretar os dados do back-end e banco de dados da melhor forma. O resultado foi um aplicativo muito funcional e útil que me deu muito orgulho de desenvolver.",
       image:
         "https://user-images.githubusercontent.com/106851605/215290848-75eca464-25fb-4f34-a2f1-508f34a8bfcf.gif",
       tech: [
         { icon: <StyledIcon />, name: "Styled-components" },
         { icon: <ReactIcon />, name: "ReactJS" },
+        { icon: <NodejsIcon />, name: "NodeJS" },
+        { icon: <MongoIcon />, name: "MongoDB" },
       ],
       github: "https://github.com/brunnaserafina/my-wallet",
       deploy: "https://mywallet-front-omega.vercel.app",
@@ -102,10 +108,10 @@ export default function MoreInfo({ id, setSelectedImage }) {
 
           <div>
             <a href={projects[id - 1].deploy} target="_blank">
-              Visite a aplicação
+              Visite a aplicação clicando aqui
             </a>
             <a href={projects[id - 1].github} target="_blank">
-              Repositório no Github
+              Acesse o repositório no Github clicando aqui
             </a>
           </div>
         </div>
@@ -134,24 +140,33 @@ export default function MoreInfo({ id, setSelectedImage }) {
 
 const Wrapper = styled.div`
   position: absolute;
-  width: 60vw;
+  width: 90vw;
+  min-height: fit-content;
   height: 70vh;
+
   background-color: #ff7f50;
-  top: 10vh;
-  left: 15vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   border-radius: 15px;
-  padding: 8%;
+  padding: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  > div:nth-child(2) {
+    height: 100%;
+  }
+
   img {
-    height: 500px;
+    height: 100%;
   }
 
   > div:nth-child(1) {
-    height: 500px;
-    width: 70%;
+    height: 100%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -175,14 +190,16 @@ const Wrapper = styled.div`
     font-size: 18px;
     color: #594645;
     margin-bottom: 10px;
+    line-height: 20px;
   }
 
   > div > div {
-    margin-right: 100px;
+    margin-right: 10%;
   }
 
   > div > div > div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -198,6 +215,7 @@ const Wrapper = styled.div`
 
   > div > span > div {
     display: flex;
+    flex-wrap: wrap;
   }
 
   > div > span > div > div {
@@ -211,6 +229,7 @@ const Wrapper = styled.div`
     min-width: 100px;
     border-radius: 5px;
     margin-right: 10px;
+    margin-top: 10px;
   }
 
   > div > span > div > div > p,
@@ -235,4 +254,96 @@ const Wrapper = styled.div`
     font-family: Lexend Deca;
     background-color: #ff7f50;
   }
+
+  @media (max-width: 912px) {
+    width: 100vw;
+    height: fit-content;
+    flex-direction: column;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 0px;
+
+    > div:nth-child(1) {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    > div > div {
+      margin-right: 0;
+    }
+
+    > div > span > div {
+      justify-content: center;
+    }
+
+    h3,
+    h4 {
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    > div > span {
+      margin: 30px 0;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  @media (max-height: 900px) {
+    width: 100vw;
+    height: fit-content;
+    flex-direction: column;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 0px;
+
+    > div:nth-child(1) {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    > div > div {
+      margin-right: 0;
+    }
+
+    > div > span > div {
+      justify-content: center;
+    }
+
+    h3,
+    h4 {
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    > div > span {
+      margin: 30px 0;
+    }
+
+    img {
+      display: none;
+    }
+  } ;
 `;
