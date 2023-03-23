@@ -7,140 +7,89 @@ import { useState } from "react";
 export default function Projects({ home, scrollToSection }) {
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const projects = [
+    {
+      id: 1,
+      image:
+        "https://user-images.githubusercontent.com/106851605/215218719-a3ad2210-4f01-49c2-bb46-edd70bc236d6.gif",
+      title: "Driven Eats",
+      type: "Front-end",
+      github: "https://github.com/brunnaserafina/driven-eats",
+      deploy: "https://brunnaserafina.github.io/driven-eats",
+    },
+    {
+      id: 2,
+      image:
+        "https://user-images.githubusercontent.com/106851605/215243342-7cd13977-4fc1-4be1-8c87-84d13274f20d.gif",
+      title: "Zap Recall",
+      type: "Front-end",
+      github: "https://github.com/brunnaserafina/zap-recall",
+      deploy: "https://projeto8-zaprecall-sand-alpha.vercel.app",
+    },
+    {
+      id: 3,
+      image:
+        "https://user-images.githubusercontent.com/106851605/215249931-aa353632-c44f-4660-ba70-975897995f74.gif",
+      title: "Cine Flex",
+      type: "Front-end",
+      github: "https://github.com/brunnaserafina/cine-flex",
+      deploy: "https://projeto9-cineflex-zeta-fawn.vercel.app",
+    },
+    {
+      id: 4,
+      image:
+        "https://user-images.githubusercontent.com/106851605/215271833-8eb725f3-43d6-4210-ae19-8af2f5ae0388.gif",
+      title: "Track It",
+      type: "Front-end",
+      github: "https://github.com/brunnaserafina/track-it",
+      deploy: "https://projeto10-trackit-seven-nu.vercel.app",
+    },
+    {
+      id: 5,
+      image:
+        "https://user-images.githubusercontent.com/106851605/215290848-75eca464-25fb-4f34-a2f1-508f34a8bfcf.gif",
+      title: "My Wallet",
+      type: "Full-stack",
+      github: "https://github.com/brunnaserafina/my-wallet",
+      deploy: "https://mywallet-front-omega.vercel.app",
+    },
+  ];
+
   return (
     <Wrapper>
       <Container>
         <h2>Projetos</h2>
         <div>
-          <div>
-            <img
-              src="https://user-images.githubusercontent.com/106851605/215218719-a3ad2210-4f01-49c2-bb46-edd70bc236d6.gif"
-              alt="Driven Eats"
-              title="Clique para mais detalhes sobre o projeto"
-              onClick={() => setSelectedImage(1)}
-            />
-            <span>
-              <a
-                href="https://github.com/brunnaserafina/driven-eats"
-                target="_blank"
-                title="Confira mais detalhes no repositório do Github"
-              >
-                <AiFillGithub />
-              </a>
-              <a
-                href="https://brunnaserafina.github.io/driven-eats/"
-                target="_blank"
-                title="Visualizar deploy da aplicação"
-              >
-                <AiFillEye />
-              </a>
-            </span>
-            <h4>Driven Eats</h4>
-            <p>Front-end</p>
-          </div>
-          <div>
-            <img
-              src="https://user-images.githubusercontent.com/106851605/215243342-7cd13977-4fc1-4be1-8c87-84d13274f20d.gif"
-              alt="Zap Recall"
-              onClick={() => setSelectedImage(2)}
-            />
-            <span>
-              <a
-                href="https://github.com/brunnaserafina/zap-recall"
-                target="_blank"
-                title="Confira mais detalhes no repositório do Github"
-              >
-                <AiFillGithub />
-              </a>
-              <a
-                href="https://projeto8-zaprecall-sand-alpha.vercel.app/"
-                target="_blank"
-                title="Visualizar deploy da aplicação"
-              >
-                <AiFillEye />
-              </a>
-            </span>
-            <h4>Zap Recall</h4>
-            <p>Front-end</p>
-          </div>
-          <div>
-            <img
-              src="https://user-images.githubusercontent.com/106851605/215249931-aa353632-c44f-4660-ba70-975897995f74.gif"
-              alt="Cine Flex"
-              title="Clique para mais detalhes sobre o projeto"
-              onClick={() => setSelectedImage(3)}
-            />
-            <span>
-              <a
-                href="https://github.com/brunnaserafina/cine-flex"
-                target="_blank"
-                title="Confira mais detalhes no repositório do Github"
-              >
-                <AiFillGithub />
-              </a>
-              <a
-                href="https://projeto9-cineflex-zeta-fawn.vercel.app/"
-                target="_blank"
-                title="Visualizar deploy da aplicação"
-              >
-                <AiFillEye />
-              </a>
-            </span>
-            <h4 onClick={() => setSelectedImage(3)}>Cine Flex</h4>
-            <p onClick={() => setSelectedImage(3)}>Front-end</p>
-          </div>
-          <div>
-            <img
-              src="https://user-images.githubusercontent.com/106851605/215271833-8eb725f3-43d6-4210-ae19-8af2f5ae0388.gif"
-              alt="Track It"
-              onClick={() => setSelectedImage(4)}
-            />
-            <span>
-              <a
-                href="https://github.com/brunnaserafina/track-it"
-                target="_blank"
-                title="Confira mais detalhes no repositório do Github"
-              >
-                <AiFillGithub />
-              </a>
-              <a
-                href="https://projeto10-trackit-seven-nu.vercel.app/"
-                target="_blank"
-                title="Visualizar deploy da aplicação"
-              >
-                <AiFillEye />
-              </a>
-            </span>
-            <h4>Track It</h4>
-            <p>Front-end</p>
-          </div>
-          <div>
-            <img
-              src="https://user-images.githubusercontent.com/106851605/215290848-75eca464-25fb-4f34-a2f1-508f34a8bfcf.gif"
-              alt="My Wallet"
-              onClick={() => setSelectedImage(5)}
-              title="Clique para mais detalhes sobre o projeto"
-            />
-
-            <span>
-              <a
-                href="https://github.com/brunnaserafina/my-wallet"
-                target="_blank"
-                title="Confira mais detalhes no repositório do Github"
-              >
-                <AiFillGithub />
-              </a>
-              <a
-                href="https://mywallet-front-omega.vercel.app/"
-                target="_blank"
-                title="Visualizar deploy da aplicação"
-              >
-                <AiFillEye />
-              </a>
-            </span>
-            <h4>My Wallet</h4>
-            <p>Full-stack</p>
-          </div>
+          {projects.map((project) => (
+            <div>
+              <img
+                src={project.image}
+                alt={project.title}
+                title="Clique para mais detalhes sobre o projeto"
+                onClick={() => setSelectedImage(project.id)}
+              />
+              <span>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  title="Confira mais detalhes no repositório do Github"
+                >
+                  <AiFillGithub />
+                </a>
+                <a
+                  href={project.deploy}
+                  target="_blank"
+                  title="Visualizar deploy da aplicação"
+                >
+                  <AiFillEye />
+                </a>
+              </span>
+              <h4 onClick={() => setSelectedImage(project.id)}>
+                {project.title}
+              </h4>
+              <p onClick={() => setSelectedImage(project.id)}>{project.type}</p>
+            </div>
+          ))}
         </div>
       </Container>
 
@@ -246,8 +195,7 @@ const Container = styled.div`
     }
 
     > div div:hover img {
-    filter: none;
-  }
-
+      filter: none;
+    }
   }
 `;

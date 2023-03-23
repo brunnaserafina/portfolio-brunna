@@ -1,4 +1,3 @@
-import { IoIosArrowDropupCircle } from "react-icons/io";
 import styled from "styled-components";
 import {
   CertificateIcon,
@@ -28,156 +27,85 @@ import {
 import ScrollTop from "../common/ScrollTop";
 
 export default function AboutMe({ home, scrollToSection }) {
+  const aboutIcons = [
+    {
+      icon: <GameIcon />,
+      text: "Primeiro contato com tecnologia aos 7 anos de idade",
+    },
+    {
+      icon: <NumbersIcon />,
+      text: "Facilidade com números e raciocínio lógico desde a infância",
+    },
+    {
+      icon: <HeadIcon fontSize={"38px"} />,
+      text: "Descobri inclinação para área através de terapia",
+    },
+    {
+      icon: <GraduationIcon />,
+      text: "Graduação em Análise e Desenvolv. de Sistemas - 2021",
+    },
+    {
+      icon: <ComputerIcon />,
+      text: "Inscrição no Bootcamp da Driven Education em 2022",
+    },
+    {
+      icon: <IdeaIcon />,
+      text: "+20 projetos individuais front-end, back-end e full-stack",
+    },
+    { icon: <GroupIcon />, text: "Projetos em equipe com metodologias ágeis" },
+    {
+      icon: <StepsIcon />,
+      text: "Desenvolvimento de habilidades interpessoais",
+    },
+    {
+      icon: <CertificateIcon />,
+      text: "Certificada como Desenvolvedora Web full-stack",
+    },
+    { icon: <WebIcon />, text: "Apaixonada por front-end e inovação" },
+  ];
+
+  const techIcons = [
+    { icon: <HtmlIcon />, text: "HTML5" },
+    { icon: <CssIcon />, text: "CSS3" },
+    { icon: <JavaScriptIcon />, text: "JavaScript" },
+    { icon: <ReactIcon />, text: "ReactJS" },
+    { icon: <StyledIcon />, text: "Styled-components" },
+    { icon: <TypeScriptIcon />, text: "TypeScript" },
+    { icon: <NodejsIcon />, text: "NodeJS" },
+    { icon: <MongoIcon />, text: "MongoDB" },
+    { icon: <PostgresqlIcon />, text: "PostgreSQL" },
+    { icon: <RedisIcon />, text: "Redis" },
+    { icon: <ExpressIcon />, text: "Express.js" },
+    { icon: <FirebaseIcon />, text: "Firebase" },
+    { icon: <GitIcon />, text: "Git" },
+  ];
+
   return (
     <Wrapper>
       <About>
         <h2>Sobre mim</h2>
         <div>
-          <div>
-            <span>
-              <GameIcon />
-            </span>
-            <p>Primeiro contato com tecnologia aos 7 anos de idade</p>
-          </div>
-          <div>
-            <span>
-              <NumbersIcon />
-            </span>
-            <p>Facilidade com números e raciocínio lógico desde a infância</p>
-          </div>
-          <div>
-            <span>
-              <HeadIcon fontSize={"38px"} />
-            </span>
-            <p>Descobri inclinação para área através de terapia </p>
-          </div>
-          <div>
-            <span>
-              <GraduationIcon />
-            </span>
-            <p>Graduação em Análise e Desenvolv. de Sistemas - 2021</p>
-          </div>
-          <div>
-            <span>
-              <ComputerIcon />
-            </span>
-            <p>Inscrição no Bootcamp da Driven Education em 2022</p>
-          </div>
-          <div>
-            <span>
-              <IdeaIcon />
-            </span>
-            <p>+20 projetos individuais front-end, back-end e full-stack</p>
-          </div>
-          <div>
-            <span>
-              <GroupIcon />
-            </span>
-            <p>Projetos em equipe com metodologias ágeis</p>
-          </div>
-          <div>
-            <span>
-              <StepsIcon />
-            </span>
-            <p>Desenvolvimento de habilidades interpessoais</p>
-          </div>
-          <div>
-            <span>
-              <CertificateIcon />
-            </span>
-            <p>Certificada como Desenvolvedora Web full-stack</p>
-          </div>
-          <div>
-            <span>
-              <WebIcon />
-            </span>
-            <p>Apaixonada por front-end e inovação</p>
-          </div>
+          {aboutIcons.map((icon) => (
+            <div>
+              <span>{icon.icon}</span>
+              <p>{icon.text}</p>
+            </div>
+          ))}
         </div>
       </About>
+
       <Technologies>
         <h2>Tecnologias e Ferramentas</h2>
         <div>
-          <div>
-            <p>HTML5</p>
-            <span>
-              <HtmlIcon />
-            </span>
-          </div>
-          <div>
-            <p>CSS3</p>
-            <span>
-              <CssIcon />
-            </span>
-          </div>
-          <div>
-            <p>JavaScript</p>
-            <span>
-              <JavaScriptIcon />
-            </span>
-          </div>
-          <div>
-            <p>React.js</p>
-            <span>
-              <ReactIcon />
-            </span>
-          </div>
-          <div>
-            <p>Styled-components</p>
-            <span>
-              <StyledIcon />
-            </span>
-          </div>
-          <div>
-            <p>TypeScript</p>
-            <span>
-              <TypeScriptIcon />
-            </span>
-          </div>
-          <div>
-            <p>Node.js</p>
-            <span>
-              <NodejsIcon />
-            </span>
-          </div>
-          <div>
-            <p>MongoDB</p>
-            <span>
-              <MongoIcon />
-            </span>
-          </div>
-          <div>
-            <p>PostgreSQL</p>
-            <span>
-              <PostgresqlIcon />
-            </span>
-          </div>
-          <div>
-            <p>Redis</p>
-            <span>
-              <RedisIcon />
-            </span>
-          </div>
-          <div>
-            <p>Express.js</p>
-            <span>
-              <ExpressIcon />
-            </span>
-          </div>
-          <div>
-            <p>Firebase</p>
-            <span>
-              <FirebaseIcon />
-            </span>
-          </div>
-          <div>
-            <p>Git</p>
-            <span>
-              <GitIcon />
-            </span>
-          </div>
+          {techIcons.map((icon) => (
+            <div>
+              <p>{icon.text}</p>
+              <span>{icon.icon}</span>
+            </div>
+          ))}
         </div>
       </Technologies>
+
       <ScrollTop home={home} scrollToSection={scrollToSection} />
     </Wrapper>
   );
@@ -339,7 +267,7 @@ const Technologies = styled.div`
       font-size: 15px;
     }
 
-    span{
+    span {
       font-size: 35px;
     }
   }
