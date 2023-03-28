@@ -1,14 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { SiReactrouter } from "react-icons/si";
 import styled from "styled-components";
 import {
   CssIcon,
+  FirebaseIcon,
   HtmlIcon,
   JavaScriptIcon,
   MongoIcon,
   NodejsIcon,
+  PostgresqlIcon,
   ReactIcon,
   StyledIcon,
+  TypeScriptIcon,
 } from "../common/Icons";
 
 export default function MoreInfo({ id, setSelectedImage }) {
@@ -82,6 +85,66 @@ export default function MoreInfo({ id, setSelectedImage }) {
       ],
       github: "https://github.com/brunnaserafina/my-wallet",
       deploy: "https://mywallet-front-omega.vercel.app",
+    },
+    {
+      id: 6,
+      name: "Shortly",
+      text: "Esta é uma página web para encurtar links, possibilitando que você acompanhe quantas pessoas visualizaram o link encurtado que você criou. A partir da quantidade de visualizações um ranking é criado com os outros usuários cadastrados na plataforma.",
+      image:
+        "https://user-images.githubusercontent.com/106851605/215304683-b8f878bc-fca5-4bae-8bb8-b8acc5bc35c3.gif",
+      tech: [
+        { icon: <StyledIcon />, name: "Styled-components" },
+        { icon: <ReactIcon />, name: "ReactJS" },
+        { icon: <NodejsIcon />, name: "NodeJS" },
+        { icon: <PostgresqlIcon />, name: "PostgreSQL" },
+      ],
+      github: "https://github.com/brunnaserafina/shortly",
+      deploy: "https://projeto16-shortly-front-mauve.vercel.app/",
+    },
+    {
+      id: 7,
+      name: "Visu",
+      text: "Visu é um projeto autoral de uma rede social para compartilhar roteiros de viagens nacionais e assim incentivar o turismo brasileiro. Você se conecta com sua conta Google, e consegue visualizar postagens de outros usuários, fazer uma postagem de uma viagem sua com todos os detalhes, verificar seu histórico e favoritar as suas viagens preferidas! A ideia nasceu a partir do desuso dos blogs com esse tipo de conteúdo, e também para ajudar quem pensa em viajar e quer montar um roteiro do seu jeitinho.",
+      image:
+        "https://user-images.githubusercontent.com/106851605/227618350-581df563-2cc0-4eb4-af15-61b022e612af.gif",
+      tech: [
+        { icon: <StyledIcon />, name: "Styled-components" },
+        { icon: <ReactIcon />, name: "ReactJS" },
+        { icon: <NodejsIcon />, name: "NodeJS" },
+        { icon: <TypeScriptIcon />, name: "TypeScript" },
+        { icon: <PostgresqlIcon />, name: "PostgreSQL" },
+        { icon: <FirebaseIcon />, name: "Firebase" },
+      ],
+      github: "https://github.com/brunnaserafina/visu",
+      deploy: "https://visu-beryl.vercel.app/",
+    },
+    {
+      id: 8,
+      name: "Parrots Card Game",
+      text: "Parrots Card Game é um site de jogo da memória com a temática de papagaios dançantes. Você pode escolher com quantas cartas quer jogar e testar suas habilidades!",
+      image:
+        "https://user-images.githubusercontent.com/106851605/215228207-6d2f6e65-48c3-46b9-a564-8f91a0083af4.gif",
+      tech: [
+        { icon: <HtmlIcon />, name: "HTML5" },
+        { icon: <CssIcon />, name: "CSS3" },
+        { icon: <JavaScriptIcon />, name: "JavaScript" },
+      ],
+      github: "https://github.com/brunnaserafina/parrots-card-game",
+      deploy: "https://brunnaserafina.github.io/parrots-card-game/",
+    },
+    {
+      id: 9,
+      name: "Bate-papo",
+      text: "Esta aplicação é uma página web de um bate-papo totalmente funcional, inspirado no saudoso Bate-Papo UOL. Digite seu nome e interaja com as pessoas!",
+      image:
+        "https://user-images.githubusercontent.com/106851605/215232188-ad3f9047-c45a-44fc-a398-d56e82a7fbfe.gif",
+      tech: [
+        { icon: <HtmlIcon />, name: "HTML5" },
+        { icon: <CssIcon />, name: "CSS3" },
+        { icon: <JavaScriptIcon />, name: "JavaScript" },
+      ],
+      github: "https://github.com/brunnaserafina/bate-papo-uol",
+      deploy: "https://brunnaserafina.github.io/bate-papo-uol/",
     },
   ];
 

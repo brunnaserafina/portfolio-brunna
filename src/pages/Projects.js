@@ -9,6 +9,15 @@ export default function Projects({ home, scrollToSection }) {
 
   const projects = [
     {
+      id: 7,
+      image:
+        "https://user-images.githubusercontent.com/106851605/227618350-581df563-2cc0-4eb4-af15-61b022e612af.gif",
+      title: "Visu",
+      type: "Full-stack",
+      github: "https://github.com/brunnaserafina/visu",
+      deploy: "https://visu-beryl.vercel.app/",
+    },
+    {
       id: 1,
       image:
         "https://user-images.githubusercontent.com/106851605/215218719-a3ad2210-4f01-49c2-bb46-edd70bc236d6.gif",
@@ -52,6 +61,33 @@ export default function Projects({ home, scrollToSection }) {
       type: "Full-stack",
       github: "https://github.com/brunnaserafina/my-wallet",
       deploy: "https://mywallet-front-omega.vercel.app",
+    },
+    {
+      id: 9,
+      image:
+        "https://user-images.githubusercontent.com/106851605/215232188-ad3f9047-c45a-44fc-a398-d56e82a7fbfe.gif",
+      title: "Bate-papo",
+      type: "Full-stack",
+      github: "https://github.com/brunnaserafina/bate-papo-uol",
+      deploy: "https://brunnaserafina.github.io/bate-papo-uol/",
+    },
+    {
+      id: 8,
+      image:
+        "https://user-images.githubusercontent.com/106851605/215228207-6d2f6e65-48c3-46b9-a564-8f91a0083af4.gif",
+      title: "Parrots Card Game",
+      type: "Front-end",
+      github: "https://github.com/brunnaserafina/parrots-card-game",
+      deploy: "https://brunnaserafina.github.io/parrots-card-game/",
+    },
+    {
+      id: 6,
+      image:
+        "https://user-images.githubusercontent.com/106851605/215304683-b8f878bc-fca5-4bae-8bb8-b8acc5bc35c3.gif",
+      title: "Shortly",
+      type: "Full-stack",
+      github: "https://github.com/brunnaserafina/shortly",
+      deploy: "https://projeto16-shortly-front-mauve.vercel.app/",
     },
   ];
 
@@ -120,6 +156,8 @@ const Container = styled.div`
 
   img {
     height: 500px;
+    max-width: 450px;
+    object-fit: cover;
     border-top-left-radius: 15px;
     border-bottom: 5px solid #a41e11;
     transition: var(--transition-1);
