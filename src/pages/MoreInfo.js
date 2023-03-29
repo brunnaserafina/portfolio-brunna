@@ -89,7 +89,7 @@ export default function MoreInfo({ id, setSelectedImage }) {
     {
       id: 6,
       name: "Shortly",
-      text: "Esta é uma página web para encurtar links, possibilitando que você acompanhe quantas pessoas visualizaram o link encurtado que você criou. A partir da quantidade de visualizações um ranking é criado com os outros usuários cadastrados na plataforma.",
+      text: "Esta é uma página web para encurtar links, possibilitando que o usuário acompanhe quantas pessoas visualizaram o link encurtado que ele criou. A partir da quantidade de visualizações um ranking é criado com os outros usuários cadastrados na plataforma, ficando no topo quem recebeu mais visitas. Meu maior desafio foi desenvolver uma API que em uma das rotas encaminharia o usuário para o link encurtado, e também desenvolver o front-end do site recebendo os dados do back-end feitos por mim, foi uma experiência muito bacana porque entendi finalmente como funcionam os encurtadores como o bit.ly que já existiam com essa proposta.",
       image:
         "https://user-images.githubusercontent.com/106851605/215304683-b8f878bc-fca5-4bae-8bb8-b8acc5bc35c3.gif",
       tech: [
@@ -104,7 +104,7 @@ export default function MoreInfo({ id, setSelectedImage }) {
     {
       id: 7,
       name: "Visu",
-      text: "Visu é um projeto autoral de uma rede social para compartilhar roteiros de viagens nacionais e assim incentivar o turismo brasileiro. Você se conecta com sua conta Google, e consegue visualizar postagens de outros usuários, fazer uma postagem de uma viagem sua com todos os detalhes, verificar seu histórico e favoritar as suas viagens preferidas! A ideia nasceu a partir do desuso dos blogs com esse tipo de conteúdo, e também para ajudar quem pensa em viajar e quer montar um roteiro do seu jeitinho.",
+      text: "Visu é um projeto autoral de uma rede social para compartilhar roteiros de viagens nacionais e assim incentivar o turismo brasileiro. O usuário se conecta com sua conta Google, e consegue visualizar postagens de outros usuários, fazer uma postagem de uma viagem com todos os detalhes, verificar seu histórico e favoritar suas viagens preferidas! A ideia nasceu a partir do desuso dos blogs com esse tipo de conteúdo, e também para ajudar quem pensa em viajar e quer montar um roteiro do seu jeitinho. Meu maior desafio, além de ter criado o projeto do zero, incluindo todo o design, front-end e back-end, foi utilizar a API do Google Maps para localizar as cidades de origem e de destino, e também os pontos turísticos e restaurantes visitados, o aprendizado foi ótimo e com certeza irei utilizar em outros projetos.",
       image:
         "https://user-images.githubusercontent.com/106851605/227618350-581df563-2cc0-4eb4-af15-61b022e612af.gif",
       tech: [
@@ -121,7 +121,7 @@ export default function MoreInfo({ id, setSelectedImage }) {
     {
       id: 8,
       name: "Parrots Card Game",
-      text: "Parrots Card Game é um site de jogo da memória com a temática de papagaios dançantes. Você pode escolher com quantas cartas quer jogar e testar suas habilidades!",
+      text: "Parrots Card Game é um site de jogo da memória com a temática de papagaios dançantes. Ao entrar no site, o usuário digita com quantas cartas deseja jogar e depois é só testar suas habilidades de memória. Meu maior desafio foi implementar a lógica de um jogo da memória, incluindo não poder virar mais de duas cartas ao mesmo tempo e conferir se as cartas viradas são iguais, caso sim, devem permanecer viradas. Foi minha primeira experiência programando um jogo e achei divertíssimo testar as várias possibilidades enquanto jogava e enviava para os meus amigos testarem também.",
       image:
         "https://user-images.githubusercontent.com/106851605/215228207-6d2f6e65-48c3-46b9-a564-8f91a0083af4.gif",
       tech: [
@@ -135,7 +135,7 @@ export default function MoreInfo({ id, setSelectedImage }) {
     {
       id: 9,
       name: "Bate-papo",
-      text: "Esta aplicação é uma página web de um bate-papo totalmente funcional, inspirado no saudoso Bate-Papo UOL. Digite seu nome e interaja com as pessoas!",
+      text: "Esta aplicação é uma página web de um bate-papo totalmente funcional, inspirado no saudoso Bate-Papo UOL. Ao entrar o usuário deve digitar seu nome e então poderá visualizar as mensagens públicas, enviar uma mensagem ou chamar alguém no privado. Meu maior desafio foi fazer com que as atividades mais recentes fossem atualizadas e assim chegassem para o usuário em tempo real.",
       image:
         "https://user-images.githubusercontent.com/106851605/215232188-ad3f9047-c45a-44fc-a398-d56e82a7fbfe.gif",
       tech: [
