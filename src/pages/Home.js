@@ -6,7 +6,7 @@ import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Education from "./Education";
 import Projects from "./Projects";
-import curriculo from "../files/CV-BrunnaSerafina.pdf";
+import curriculo from "../files/CV - Brunna Serafina.pdf";
 import { AiOutlineMenu } from "react-icons/ai";
 
 export default function Home() {
