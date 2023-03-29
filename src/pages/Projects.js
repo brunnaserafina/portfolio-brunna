@@ -156,7 +156,7 @@ const Container = styled.div`
 
   img {
     height: 500px;
-    max-width: 450px;
+    max-width: 400px;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-bottom: 5px solid #a41e11;
@@ -168,6 +168,7 @@ const Container = styled.div`
   > div {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   > div div {
