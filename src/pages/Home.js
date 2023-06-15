@@ -71,7 +71,7 @@ export default function Home() {
 
         <Content>
           <h1>
-            Full-stack <br></br>
+            Web <br></br>
             DEVELOPER.
           </h1>
 
