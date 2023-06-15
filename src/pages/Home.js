@@ -82,13 +82,6 @@ export default function Home() {
             melhores soluções e tecnologias, para isso venho me especializando,
             enfrentando desafios e ampliando meus conhecimentos diariamente.
           </p>
-
-          <button style={{ "background-color": "#a41e11", color: "white" }}>
-            <a href={curriculo} download="CV - Brunna Serafina">
-              Download CV
-            </a>
-          </button>
-          <button onClick={() => scrollToSection(contact)}>Contato</button>
         </Content>
 
         <Footer>
